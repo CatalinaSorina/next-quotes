@@ -1,0 +1,50 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+  cursor: default;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #ffc83d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(138, 137, 137);
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #faf6ed;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffc83d;
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(138, 137, 137);
+}

@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "Author": "William James",
+        "Quote": "Act as if what you do makes a difference. It does.",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/9/9c/William_James_b1842c.jpg"
+    },
+    {
+        "id": 2,
+        "Author": "Winston Churchill",
+        "Quote": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+        "img": "https://www.historyonthenet.com/wp-content/uploads/2016/11/Churchill_HU_90973.jpg"
+    },
+    {
+        "id": 3,
+        "Author": "Zig Ziglar",
+        "Quote": "What you get by achieving your goals is not as important as what you become by achieving your goals.",
+        "img": "https://www.buildandbalance.com/wp-content/uploads/2018/01/Zig-Ziglar.png"
+    },
+    {
+        "id": 4,
+        "Author": "Theodore Roosevelt",
+        "Quote": "Believe you can and you're halfway there.",
+        "img": "https://www.public.navy.mil/airfor/cvn71/PublishingImages/TheodoreRooseveltGRindentif[1].jpg"
+    },
+    {
+        "id": 5,
+        "Author": "Carol Burnett",
+        "Quote": "When you have a dream, you've got to grab it and never let go.",
+        "img": "https://i.pinimg.com/originals/7a/e4/9b/7ae49be4e7062b68d9222bbed63316f8.jpg"
+    },
+    {
+        "id": 6,
+        "Author": "Jimmy Dean",
+        "Quote": "I can't change the direction of the wind, but I can adjust my sails to always reach my destination.",
+        "img": "https://i.pinimg.com/originals/83/3d/4f/833d4fceafa6d4b2fe235a971378d075.jpg"
+    },
+    {
+        "id": 7,
+        "Author": "Demi Lovato",
+        "Quote": "No matter what you're going through, there's a light at the end of the tunnel.",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Demi_Lovato_Interview_Feb_2020.png"
+    }
+]
