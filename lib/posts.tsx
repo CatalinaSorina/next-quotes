@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import remark from 'remark';
 import html from 'remark-html';
 import axios from 'axios';
+import quotes from '../pages/api/data/quotes.json';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
@@ -46,16 +47,17 @@ export async function getQuotes() {
   }
 }
 
-export async function getAllQuotesIds() {
-  try {
-    const { data } = await axios.get('http://localhost:3000/api/quotes');
-    return data.map(obj => {
-      const authorName = obj.Author.replace(/ /g, '');
-      return { params: { author: authorName } };
-    });
-  } catch (error) {
-    console.error('error', error);
-  }
+export function getAllQuotesIds() {
+  // try {
+  // const { data } = await axios.get('http://localhost:3000/api/quotes');
+  const authors = quotes.map(obj => {
+    const authorName = obj.Author.replace(/ /g, '');
+    return { params: { author: authorName } };
+  });
+  return authors;
+  // } catch (error) {
+  //   console.error('error', error);
+  // }
 }
 
 export function getAllPostIds() {
