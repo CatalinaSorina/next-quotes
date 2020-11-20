@@ -8,6 +8,7 @@
     "build": "next build"
   },
   "dependencies": {
+    "@types/gtag.js": "0.0.3",
     "axios": "^0.20.0",
     "classnames": "^2.2.6",
     "date-fns": "^2.16.1",
