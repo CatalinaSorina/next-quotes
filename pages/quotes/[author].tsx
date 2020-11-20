@@ -10,7 +10,7 @@ export default function Post({
 }: {
   quote: { id: number; Author: string; Quote: string; img: string };
 }) {
-  const { authorPic, quoteArticle, headingXl, quote, backToHome } = utilStyles;
+  const { authorPic, quoteArticle, headingXl, quote } = utilStyles;
   return (
     <Layout>
       <Head>

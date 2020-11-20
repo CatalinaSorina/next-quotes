@@ -49,7 +49,10 @@ export async function getQuotes() {
 export async function getAllQuotesIds() {
   try {
     const { data } = await axios.get('http://localhost:3000/api/quotes');
-    return data.map(obj => ({ params: { author: obj.Author.replace(/ /g,'') } }));
+    return data.map(obj => {
+      const authorName = obj.Author.replace(/ /g, '');
+      return { params: { author: authorName } };
+    });
   } catch (error) {
     console.error('error', error);
   }
