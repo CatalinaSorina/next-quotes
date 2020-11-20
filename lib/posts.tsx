@@ -39,25 +39,15 @@ export function getSortedPostsData() {
 }
 
 export async function getQuotes() {
-  try {
-    const { data } = await axios.get('http://localhost:3000/api/quotes');
-    return data;
-  } catch (error) {
-    console.error('error', error);
-  }
+  return quotes;
 }
 
 export function getAllQuotesIds() {
-  // try {
-  // const { data } = await axios.get('http://localhost:3000/api/quotes');
   const authors = quotes.map(obj => {
     const authorName = obj.Author.replace(/ /g, '');
     return { params: { author: authorName } };
   });
   return authors;
-  // } catch (error) {
-  //   console.error('error', error);
-  // }
 }
 
 export function getAllPostIds() {
