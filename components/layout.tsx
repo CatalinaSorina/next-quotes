@@ -4,7 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 const name = '⭐get inspired⭐';
-export const siteTitle = 'Get inspired';
+export const siteTitle = 'Home';
 
 export default function Layout({
   children,

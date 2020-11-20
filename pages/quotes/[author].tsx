@@ -4,6 +4,8 @@ import Head from 'next/head';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import utilStyles from '../../styles/utils.module.css';
 import Link from 'next/link';
+import { useEffect } from 'react';
+import { event } from '../../utils/gtag';
 
 export default function Post({
   quote: { Author, Quote, img },
@@ -11,14 +13,30 @@ export default function Post({
   quote: { id: number; Author: string; Quote: string; img: string };
 }) {
   const { authorPic, quoteArticle, headingXl, quote } = utilStyles;
+  let start: any;
+  useEffect(() => {
+    start = new Date();
+  }, []);
+  const calculateTimeSpent = () => {
+    const end: any = new Date();
+    const timeSpent = Math.abs(end - start) / 1000;
+    event({
+      action: `quote watched for ${timeSpent}sec`,
+      category: 'quotes',
+      label: `user saw quote for ${timeSpent}sec and returned to other quotes`,
+      value: 2,
+    });
+  };
   return (
     <Layout>
       <Head>
         <title>{Author}</title>
       </Head>
-      <Link href='/quotes'>
-        <a>← Back to quotes</a>
-      </Link>
+      <div onClick={calculateTimeSpent}>
+        <Link href="/quotes">
+          <a>← Back to quotes</a>
+        </Link>
+      </div>
       <article className={quoteArticle}>
         <img className={authorPic} src={img} />
         <div>
@@ -42,7 +60,7 @@ export const getStaticProps: GetStaticProps = async ({
   params: { author },
 }) => {
   const res = await getQuotes();
-  const quote = res.find(obj => obj.Author.replace(/ /g, '') === author);
+  const quote = res.find((obj) => obj.Author.replace(/ /g, '') === author);
   return {
     props: {
       quote,
