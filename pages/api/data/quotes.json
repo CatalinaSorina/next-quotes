@@ -1,42 +1,72 @@
 [
     {
         "id": 1,
-        "Author": "William James",
-        "Quote": "Act as if what you do makes a difference. It does.",
-        "img": "https://upload.wikimedia.org/wikipedia/commons/9/9c/William_James_b1842c.jpg"
+        "Author": "Mahatma Gandhi",
+        "Quote": "Happiness is when what you think, what you say, and what you do are in harmony.",
+        "img": "https://www.onthisday.com/images/people/mahatma-gandhi-medium.jpg"
     },
     {
         "id": 2,
+        "Author": "Mother Teresa",
+        "Quote": "One of the greatest diseases is to be nobody to anybody.",
+        "img": "https://cdn.britannica.com/08/79308-050-D26D18BA/St-Teresa-of-Calcutta-saint-2016.jpg"
+    },
+    {
+        "id": 3,
+        "Author": "Albert Einstein",
+        "Quote": "I am thankful for all of those who said NO to me. It’s because of them I’m doing it myself.",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg"
+    },
+    {
+        "id": 4,
+        "Author": "Steve Jobs",
+        "Quote": "My favorite things in life don’t cost any money. It’s really clear that the most precious resource we all have is time.",
+        "img": "https://heidicohen.com/wp-content/uploads/784px-Steve_Jobs_Headshot_2010-CROP-e1317959260324.jpeg"
+    },
+    {
+        "id": 5,
+        "Author": "Coco Chanel",
+        "Quote": "Success is most often achieved by those who don’t know that failure is inevitable",
+        "img": "https://m.media-amazon.com/images/I/41IGZcYO3cL.jpg"
+    },
+    {
+        "id": 6,
+        "Author": "Kanye West",
+        "Quote": "I refuse to accept other people’s ideas of happiness for me. As if there’s a one size fits all standard for happiness.",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Kanye_West_at_the_2009_Tribeca_Film_Festival-2_%28cropped%29.jpg"
+    },
+    {
+        "id": 7,
         "Author": "Winston Churchill",
         "Quote": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
         "img": "https://www.historyonthenet.com/wp-content/uploads/2016/11/Churchill_HU_90973.jpg"
     },
     {
-        "id": 3,
+        "id": 8,
         "Author": "Zig Ziglar",
         "Quote": "What you get by achieving your goals is not as important as what you become by achieving your goals.",
         "img": "https://www.buildandbalance.com/wp-content/uploads/2018/01/Zig-Ziglar.png"
     },
     {
-        "id": 4,
+        "id": 9,
         "Author": "Theodore Roosevelt",
         "Quote": "Believe you can and you're halfway there.",
         "img": "https://www.public.navy.mil/airfor/cvn71/PublishingImages/TheodoreRooseveltGRindentif[1].jpg"
     },
     {
-        "id": 5,
+        "id": 10,
         "Author": "Carol Burnett",
         "Quote": "When you have a dream, you've got to grab it and never let go.",
         "img": "https://i.pinimg.com/originals/7a/e4/9b/7ae49be4e7062b68d9222bbed63316f8.jpg"
     },
     {
-        "id": 6,
+        "id": 11,
         "Author": "Jimmy Dean",
         "Quote": "I can't change the direction of the wind, but I can adjust my sails to always reach my destination.",
         "img": "https://i.pinimg.com/originals/83/3d/4f/833d4fceafa6d4b2fe235a971378d075.jpg"
     },
     {
-        "id": 7,
+        "id": 12,
         "Author": "Demi Lovato",
         "Quote": "No matter what you're going through, there's a light at the end of the tunnel.",
         "img": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Demi_Lovato_Interview_Feb_2020.png"

@@ -39,10 +39,8 @@
 
 .quotesList {
   list-style: none;
-  padding: 0;
-  margin: 0;
   overflow: auto;
-  height: 120px;
+  height: 350px;
   font-size: 15px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -80,7 +78,9 @@
 }
 
 .quotesListItem {
-  margin: 0 0 1rem;
+  margin: 1rem;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display: flex;
   justify-content: flex-start;
 }
@@ -98,6 +98,10 @@
   border: 3px solid black;
 }
 
+.quotesListItem img:hover {
+  color: black;
+}
+
 .authorPic {
   height: 300px;
   margin-right: 20px;
@@ -109,4 +113,77 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.jokePic {
+  border: 2px dotted #ffc83d;
+  box-shadow: 0 0 5px 0.5px #ffc83d;
+  border-radius: 5px;
+}
+
+.emojiButton {
+  border: none;
+  cursor: pointer;
+  background: none;
+  font-size: 30px;
+  outline: none;
+}
+
+.emojiButton:hover {
+  filter: grayscale(50%);
+}
+
+.emojiButton:active {
+  filter: grayscale(80%);
+  font-size: 29px;
+}
+
+.activeEmoji {
+  filter: grayscale(100%);
+}
+
+.spaceBetweenDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.spaceEvenlyDiv {
+  display: flex;
+  width: 20rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+.contactMsg {
+  padding: 1rem;
+  height: 200px;
+  resize: vertical;
+  outline: none;
+  font-size: 15px;
+}
+
+.contactMsg:focus {
+  background-color: #ffecbd;
+}
+
+.contactSend {
+  display: flex;
+  outline: none;
+  background-color: #ffc83d;
+  border-width: 1px;
+  border-radius: 4px;
+  align-self: flex-end;
+  font-size: 15px;
+  margin: 4px;
+  padding: 4px;
+}
+
+.menu {
+  margin: 0.1rem;
+  display: flex;
 }
