@@ -13,7 +13,7 @@ export default function Layout({
 }: {
   children: React.ReactNode;
   home?: boolean;
-  additionalBack?: React.MouseEvent<HTMLDivElement, MouseEvent>;
+  additionalBack?: Function;
 }) {
   return (
     <div className={styles.container}>
@@ -65,7 +65,7 @@ export default function Layout({
       {!home && (
         <div
           className={styles.backToHome}
-          onClick={additionalBack && additionalBack}>
+          onClick={(event: any) => additionalBack && additionalBack}>
           <Link href='/'>
             <a>← Back to home</a>
           </Link>
