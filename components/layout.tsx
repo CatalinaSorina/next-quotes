@@ -9,9 +9,11 @@ export const siteTitle = 'Home';
 export default function Layout({
   children,
   home,
+  additionalBack,
 }: {
   children: React.ReactNode;
   home?: boolean;
+  additionalBack?: MouseEvent<HTMLDivElement, MouseEvent>;
 }) {
   return (
     <div className={styles.container}>
@@ -61,7 +63,9 @@ export default function Layout({
       </header>
       <main>{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
+        <div
+          className={styles.backToHome}
+          onClick={additionalBack && additionalBack}>
           <Link href='/'>
             <a>← Back to home</a>
           </Link>

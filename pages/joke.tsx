@@ -5,7 +5,30 @@ import utilStyles from '../styles/utils.module.css';
 
 export default function Home() {
   const { jokePic, spaceBetweenDiv, emojiButton, activeEmoji } = utilStyles;
-  const [funny, setFunny] = useState();
+  const [funny, setFunny] = useState<boolean>();
+  const setEmoji = like => {
+    if (like) {
+      // IF EMOJI IS LIKE
+      if (funny) {
+        // IF LIKE IS ALREADY SET, REMOVE LIKE
+        setFunny(undefined);
+      } else {
+        // SET LIKE
+        setFunny(true);
+        console.log('user likes joke');
+      }
+    } else {
+      // IF EMOJI IS DISLIKE
+      if (funny || typeof funny === 'undefined') {
+        // SET DISLIKE
+        setFunny(false);
+        console.log('user dislikes joke');
+      } else {
+        // IF DISLIKE IS ALREADY SET, REMOVE DISLIKE
+        setFunny(undefined);
+      }
+    }
+  };
   return (
     <Layout>
       <Head>
@@ -15,14 +38,12 @@ export default function Home() {
       <div className={spaceBetweenDiv}>
         <button
           className={emojiButton + ' ' + (funny === false && activeEmoji)}
-          onClick={() =>
-            funny || typeof funny === 'undefined' ? setFunny(false) : setFunny()
-          }>
+          onClick={() => setEmoji(false)}>
           😕
         </button>
         <button
           className={emojiButton + ' ' + (funny && activeEmoji)}
-          onClick={() => (funny ? setFunny() : setFunny(true))}>
+          onClick={() => setEmoji(true)}>
           😂
         </button>
       </div>

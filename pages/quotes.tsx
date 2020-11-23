@@ -18,7 +18,6 @@ export default function Quotes({
         action: 'scrolled for all quotes',
         category: 'quotes',
         label: 'user saw all quotes',
-        value: 1,
       });
   };
   return (

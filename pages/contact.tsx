@@ -6,10 +6,9 @@ import { event } from '../utils/gtag';
 export default function Contact() {
   const onSubmit = () => {
     event({
-      action: 'submit contact form',
+      action: 'message sent',
       category: 'contact form',
-      label: 'user has send a message successfuly',
-      value: 0,
+      label: 'user has send a message successfully',
     });
   };
   return (
@@ -19,10 +18,9 @@ export default function Contact() {
       </Head>
       <form
         style={{ display: 'flex', flexDirection: 'column' }}
-        onSubmit={onSubmit}
-      >
+        onSubmit={onSubmit}>
         <textarea
-          placeholder="write your thoughts"
+          placeholder='write your thoughts'
           className={utilStyles.contactMsg}
         />
         <button className={utilStyles.contactSend}>send</button>

@@ -19,29 +19,31 @@ export default function Post({
   }, []);
   const calculateTimeSpent = () => {
     const end: any = new Date();
-    const timeSpent = Math.abs(end - start) / 1000;
+    const allSeconds = Math.abs(end - start) / 1000;
+    const secWithoutMinutes: number = Math.floor(allSeconds % 60);
+    const minutes = Math.floor((allSeconds - secWithoutMinutes) / 60);
+    console.log(`${minutes}'${secWithoutMinutes}" quote watched`);
     event({
-      action: `quote watched for ${timeSpent}sec`,
+      action: `${minutes}'${secWithoutMinutes}" quote watched`,
       category: 'quotes',
-      label: `user saw quote for ${timeSpent}sec and returned to other quotes`,
-      value: 2,
+      label: `user saw quote for ${minutes}'${secWithoutMinutes}" and returned to other quotes`,
     });
   };
   return (
-    <Layout>
+    <Layout additionalBack={calculateTimeSpent}>
       <Head>
         <title>{Author}</title>
       </Head>
-      <div onClick={calculateTimeSpent}>
-        <Link href="/quotes">
-          <a>← Back to quotes</a>
-        </Link>
-      </div>
       <article className={quoteArticle}>
         <img className={authorPic} src={img} />
         <div>
           <h1 className={headingXl + ' ' + quote}>{Author}</h1>
           <p>{Quote}</p>
+          <div onClick={calculateTimeSpent}>
+            <Link href='/quotes'>
+              <a>See more quotes →</a>
+            </Link>
+          </div>
         </div>
       </article>
     </Layout>
@@ -60,7 +62,7 @@ export const getStaticProps: GetStaticProps = async ({
   params: { author },
 }) => {
   const res = await getQuotes();
-  const quote = res.find((obj) => obj.Author.replace(/ /g, '') === author);
+  const quote = res.find(obj => obj.Author.replace(/ /g, '') === author);
   return {
     props: {
       quote,
