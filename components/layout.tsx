@@ -13,7 +13,7 @@ export default function Layout({
 }: {
   children: React.ReactNode;
   home?: boolean;
-  additionalBack?: MouseEvent<HTMLDivElement, MouseEvent>;
+  additionalBack?: React.MouseEvent<HTMLDivElement, MouseEvent>;
 }) {
   return (
     <div className={styles.container}>
