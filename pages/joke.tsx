@@ -6,12 +6,13 @@ import utilStyles from '../styles/utils.module.css';
 export default function Home() {
   const { jokePic, spaceBetweenDiv, emojiButton, activeEmoji } = utilStyles;
   const [funny, setFunny] = useState<boolean>();
-  const setEmoji = like => {
+  const setEmoji = (like) => {
     if (like) {
       // IF EMOJI IS LIKE
       if (funny) {
         // IF LIKE IS ALREADY SET, REMOVE LIKE
         setFunny(undefined);
+        console.log('user removed like');
       } else {
         // SET LIKE
         setFunny(true);
@@ -26,6 +27,7 @@ export default function Home() {
       } else {
         // IF DISLIKE IS ALREADY SET, REMOVE DISLIKE
         setFunny(undefined);
+        console.log('user removed dislike');
       }
     }
   };
@@ -34,16 +36,18 @@ export default function Home() {
       <Head>
         <title>Joke</title>
       </Head>
-      <img className={jokePic} src='/images/joke.jpg' alt='no pic' />
+      <img className={jokePic} src="/images/joke.jpg" alt="no pic" />
       <div className={spaceBetweenDiv}>
         <button
           className={emojiButton + ' ' + (funny === false && activeEmoji)}
-          onClick={() => setEmoji(false)}>
+          onClick={() => setEmoji(false)}
+        >
           😕
         </button>
         <button
           className={emojiButton + ' ' + (funny && activeEmoji)}
-          onClick={() => setEmoji(true)}>
+          onClick={() => setEmoji(true)}
+        >
           😂
         </button>
       </div>
