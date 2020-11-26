@@ -2,11 +2,12 @@ import { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
+import { event } from '../utils/gtag';
 
 export default function Home() {
   const { jokePic, spaceBetweenDiv, emojiButton, activeEmoji } = utilStyles;
   const [funny, setFunny] = useState<boolean>();
-  const setEmoji = (like) => {
+  const setEmoji = like => {
     if (like) {
       // IF EMOJI IS LIKE
       if (funny) {
@@ -17,6 +18,11 @@ export default function Home() {
         // SET LIKE
         setFunny(true);
         console.log('user likes joke');
+        event({
+          action: 'trigger like joke',
+          category: 'joke',
+          label: 'user likes joke',
+        });
       }
     } else {
       // IF EMOJI IS DISLIKE
@@ -24,6 +30,11 @@ export default function Home() {
         // SET DISLIKE
         setFunny(false);
         console.log('user dislikes joke');
+        event({
+          action: 'trigger dislikes joke',
+          category: 'joke',
+          label: 'user dislikes joke',
+        });
       } else {
         // IF DISLIKE IS ALREADY SET, REMOVE DISLIKE
         setFunny(undefined);
@@ -36,18 +47,16 @@ export default function Home() {
       <Head>
         <title>Joke</title>
       </Head>
-      <img className={jokePic} src="/images/joke.jpg" alt="no pic" />
+      <img className={jokePic} src='/images/joke.jpg' alt='no pic' />
       <div className={spaceBetweenDiv}>
         <button
           className={emojiButton + ' ' + (funny === false && activeEmoji)}
-          onClick={() => setEmoji(false)}
-        >
+          onClick={() => setEmoji(false)}>
           😕
         </button>
         <button
           className={emojiButton + ' ' + (funny && activeEmoji)}
-          onClick={() => setEmoji(true)}
-        >
+          onClick={() => setEmoji(true)}>
           😂
         </button>
       </div>
