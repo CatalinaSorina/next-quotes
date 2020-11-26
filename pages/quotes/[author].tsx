@@ -22,7 +22,6 @@ export default function Post({
     const allSeconds = Math.abs(end - start) / 1000;
     const secWithoutMinutes: number = Math.floor(allSeconds % 60);
     const minutes = Math.floor((allSeconds - secWithoutMinutes) / 60);
-    console.log(`${minutes}'${secWithoutMinutes}" quote watched`);
     event({
       action: `${minutes}'${secWithoutMinutes}" quote watched`,
       category: 'quotes',
